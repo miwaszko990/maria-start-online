@@ -24,3 +24,51 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Typography */
+.h1-clamp { 
+  @apply font-bold tracking-tight leading-tight; 
+  font-size: clamp(2rem, 4vw, 3.5rem); 
+}
+
+.h2-clamp { 
+  @apply font-semibold tracking-tight; 
+  font-size: clamp(1.5rem, 2.6vw, 2rem); 
+}
+
+.copy-lg { 
+  @apply text-slate-600; 
+  font-size: clamp(1rem, 1.4vw, 1.125rem); 
+}
+
+/* Buttons */
+.btn { 
+  @apply inline-flex items-center gap-2 rounded-2xl px-6 py-3 font-medium transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-black/40; 
+}
+
+.btn-primary { 
+  @apply bg-black text-white hover:opacity-90 active:opacity-80; 
+}
+
+.btn-ghost { 
+  @apply border border-black/10 hover:bg-slate-100 dark:border-white/10 dark:hover:bg-slate-800; 
+}
+
+.btn-disabled { 
+  @apply opacity-50 pointer-events-none; 
+}
+
+/* Cards */
+.card {
+  @apply rounded-2xl border border-black/10 bg-white/70 backdrop-blur shadow-sm dark:bg-slate-900/60 dark:border-white/10;
+}
+
+/* Modal scroll lock */
+html:has([role='dialog']) {
+  overflow: hidden;
+}
+
+/* Radial gradient utility */
+.bg-gradient-radial {
+  background-image: radial-gradient(circle, var(--tw-gradient-stops));
+}

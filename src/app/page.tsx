@@ -1,103 +1,185 @@
-import Image from "next/image";
+"use client";
+import Navbar from "./_components/Navbar";
+import Section from "./_components/Section";
+import WorkSection from "./_components/WorkSection";
+import Pricing from "./_components/Pricing";
+import FeatureAddonSection from "./_components/FeatureAddonSection";
+import FAQ from "./_components/FAQ";
+import ContactSection from "./_components/Contact";
+import SiteFooter from "./_components/SiteFooter";
+import { motion } from "framer-motion";
+import { Check, Store, Settings, Zap, Rocket, Smartphone, Shield, Upload, FileText, MonitorSmartphone, CreditCard, Mail, Search, Info } from "lucide-react";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Navbar />
+      
+      <Section id="hero" className="py-28 sm:py-32 text-center">
+        <motion.div 
+          initial={{opacity:0, y:8}} 
+          animate={{opacity:1, y:0}} 
+          transition={{duration:0.35, ease:"easeOut"}}
+        >
+          <h1 className="h1-clamp mb-6">
+            Gotowy sklep online w 8 dni — od projektu do sprzedaży.
+          </h1>
+          <p className="copy-lg mb-8 max-w-2xl mx-auto">
+            Strona, płatności, Klaviyo, Instagram Shop i analityka w jednym spójnym systemie. Bez chaosu, bez stresu, gotowe do zarabiania.
+          </p>
+          <div className="flex justify-center gap-4 mb-10">
+            <a
+              id="primary-cta"
+              href="mailto:hello@startonlinelab.com?subject=Konsultacja%2015%20min"
+              className="btn btn-primary"
+              aria-label="Schedule a consultation"
+            >
+              Umów konsultację
+            </a>
+            <a
+              id="secondary-cta"
+              href="#price"
+              className="btn btn-ghost"
+              aria-label="See what you get"
+            >
+              Zobacz co dostajesz
+            </a>
+          </div>
+          <div className="flex justify-center gap-5 flex-wrap text-sm text-slate-500">
+            <span>8 dni</span>
+            <span>Mobile-first</span>
+            <span>Stripe / BLIK</span>
+            <span>Klaviyo</span>
+            <span>SEO + Analytics</span>
+          </div>
+        </motion.div>
+      </Section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* Mini-badges Section */}
+      <Section className="py-10">
+        <div className="grid sm:grid-cols-3 gap-4 text-sm">
+          <div className="rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-4 text-center font-medium text-slate-800 flex items-center justify-center gap-2">
+            <Rocket className="w-4 h-4" /> Start w 8 dni
+          </div>
+          <div className="rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-4 text-center font-medium text-slate-800 flex items-center justify-center gap-2">
+            <Smartphone className="w-4 h-4" /> Mobile-focused
+          </div>
+          <div className="rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-4 text-center font-medium text-slate-800 flex items-center justify-center gap-2">
+            <Shield className="w-4 h-4" /> Stała cena, jasny proces
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </Section>
+
+      {/* What you get Section */}
+      <Section id="package" className="py-24 sm:py-28">
+        <div className="grid lg:grid-cols-3 gap-4">
+          {/* Card 1 */}
+          <div className="rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-6 shadow-md hover:shadow-lg transition-shadow">
+            <div className="text-xl font-semibold text-slate-900 flex items-center gap-2 mb-4">
+              <Store className="w-5 h-5 text-slate-500 shrink-0" /> Sklep / Strona
+            </div>
+            <ul className="space-y-2 text-slate-700 leading-relaxed">
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Shopify, Webflow i inne - Projekt i implementacja</span></li>
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Do 6 podstron (strona główna, oferta/produkt, o nas, cennik, kontakt, koszyk*)</span></li>
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Prędkość i wyniki Core Web Vitals</span></li>
+            </ul>
+            <p className="mt-4 text-xs text-slate-500">*Checkout w zależności od wybranej platformy.</p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-6 shadow-md hover:shadow-lg transition-shadow"> 
+            <div className="text-xl font-semibold text-slate-900 flex items-center gap-2 mb-4"> 
+              <Settings className="w-5 h-5 text-slate-500 shrink-0" /> Integracje 
+            </div> 
+            <ul className="space-y-2 text-slate-700 leading-relaxed"> 
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Płatności: Stripe / Przelewy24 / BLIK</span></li> 
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Klaviyo: pop-up, newsletter, email powitalny</span></li> 
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Google Analytics 4 + Meta Pixel</span></li> 
+            </ul> 
+          </div> 
+
+          {/* Card 3 */} 
+          <div className="rounded-2xl border border-black/10 bg-white/70 backdrop-blur p-6 shadow-md hover:shadow-lg transition-shadow"> 
+            <div className="text-xl font-semibold text-slate-900 flex items-center gap-2 mb-4"> 
+              <Zap className="w-5 h-5 text-slate-500 shrink-0" /> Gotowe na rozwój 
+            </div> 
+            <ul className="space-y-2 text-slate-700 leading-relaxed"> 
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Mini-SEO (tytuł, meta, nagłówki, indeksacja)</span></li> 
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>Instagram Shop / katalog produktów (opcjonalnie)</span></li>
+              <li className="flex gap-3 items-start"><Check className="w-5 h-5 text-slate-500 shrink-0 mt-0.5"/><span>10-minutowy tutorial wideo + lista startowa</span></li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* Process Section */}
+      <Section id="process" className="py-24 sm:py-28 bg-gradient-to-b from-white to-slate-50">
+        <div className="text-center mb-12">
+          <div className="text-xs uppercase tracking-wider text-slate-500 mb-2">Proces</div>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-4">Wystartuj w 8 dni</h2>
+          <p className="text-slate-600 max-w-2xl mx-auto">
+            Jasny proces krok po kroku — bez spotkań, bez stresu. Wystarczy, że wyślesz materiały (logo, zdjęcia, opis oferty), a resztą zajmiemy się my.
+          </p>
+        </div>
+        
+        <motion.div 
+          variants={{
+            hidden: { opacity: 0 },
+            show: { opacity: 1, transition: { staggerChildren: 0.06 } }
+          }}
+          initial="hidden" 
+          whileInView="show" 
+          viewport={{ once: true, amount: 0.2 }} 
+          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          {[
+            { day: "Dzień 1", title: "Start projektu", desc: "Otrzymujesz checklistę i formularz. Przesyłasz logo, zdjęcia i opis oferty.", icon: Upload, iconClass: "w-5 h-5 text-indigo-500" },
+            { day: "Dzień 2", title: "Struktura i treści", desc: "Tworzymy układ strony i krótkie teksty sprzedażowe.", icon: FileText, iconClass: "w-5 h-5 text-emerald-500" },
+            { day: "Dni 3–4", title: "Design i wdrożenie", desc: "Projektujemy i kodujemy stronę, skupiając się na mobilnym wyglądzie i sprzedaży.", icon: MonitorSmartphone, iconClass: "w-5 h-5 text-sky-500" },
+            { day: "Dzień 5", title: "Płatności i wysyłka", desc: "Konfiguracja płatności (Stripe, Przelewy24, BLIK) i maili transakcyjnych.", icon: CreditCard, iconClass: "w-5 h-5 text-rose-500" },
+            { day: "Dzień 6", title: "Klaviyo", desc: "Automatyzacje: pop-up, newsletter, e-mail powitalny.", icon: Mail, iconClass: "w-5 h-5 text-purple-500" },
+            { day: "Dzień 7", title: "SEO + Analityka", desc: "Wdrożenie GA4, Meta Pixel i podstawowe SEO.", icon: Search, iconClass: "w-5 h-5 text-amber-500" },
+            { day: "Dzień 8", title: "Testy i uruchomienie", desc: "Ostateczna kontrola, tutorial i start sprzedaży.", icon: Rocket, iconClass: "w-5 h-5 text-blue-500" },
+            { day: "📝 Uwaga", title: "Materiały od Ciebie", desc: "8 dni liczymy od momentu otrzymania wszystkich materiałów. Jeśli potrzebujesz pomocy przy przygotowaniu – pomożemy Ci krok po kroku.", icon: Info, iconClass: "w-5 h-5 text-slate-500" }, 
+          ].map((s, i) => {
+            const IconComponent = s.icon;
+            return (
+              <motion.div 
+                key={i} 
+                variants={{
+                  hidden: { opacity: 0, y: 10 },
+                  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: "easeOut" } }
+                }}
+                className="rounded-2xl border border-black/10 bg-slate-50 p-6 shadow-sm hover:shadow-md transition-shadow"
+              > 
+                <div className="text-sm text-slate-500 font-mono mb-2">{s.day}</div> 
+                <div className="flex items-center gap-2 text-lg font-semibold text-slate-900 mb-3">
+                  <IconComponent className={s.iconClass} /> {s.title}
+                </div> 
+                <p className="text-slate-700 text-sm leading-relaxed">{s.desc}</p> 
+              </motion.div> 
+            );
+          })} 
+        </motion.div>
+      </Section>
+
+      {/* Portfolio Section */}
+      <WorkSection />
+      
+      {/* Pricing Section */}
+      <Pricing />
+      
+      {/* Feature Addon Section */}
+      <FeatureAddonSection />
+      
+      {/* FAQ Section */}
+      <FAQ />
+      
+      {/* Contact Section */}
+      <ContactSection />
+      
+      {/* Footer */}
+      <SiteFooter />
+    </>
   );
 }

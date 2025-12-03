@@ -34,8 +34,8 @@ export default function CancelPage() {
           
           <p className="text-sm text-slate-500">
             Masz pytania? Napisz na{" "}
-            <a href="mailto:hello@online-lab.pl" className="text-black hover:underline">
-              hello@online-lab.pl
+            <a href="mailto:hello@online-lab.com" className="text-black hover:underline">
+              hello@online-lab.com
             </a>
           </p>
         </div>

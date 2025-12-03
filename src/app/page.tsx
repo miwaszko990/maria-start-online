@@ -30,7 +30,7 @@ export default function Home() {
           <div className="flex justify-center gap-4 mb-10">
             <a
               id="primary-cta"
-              href="mailto:hello@startonlinelab.com?subject=Konsultacja%2015%20min"
+              href="mailto:hello@online-lab.com?subject=Konsultacja%2015%20min"
               className="btn btn-primary"
               aria-label="Schedule a consultation"
             >

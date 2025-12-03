@@ -203,7 +203,7 @@ export default function ContactSection() {
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-slate-500" />
                   <a
-                    href="mailto:hello@startonlinelab.pl"
+                    href="mailto:hello@online-lab.com"
                     className="text-slate-600 hover:text-slate-900 transition-colors"
                   >
                     E-mail
@@ -214,7 +214,7 @@ export default function ContactSection() {
                 <div className="flex items-center gap-3">
                   <Calendar className="w-4 h-4 text-slate-500" />
                   <a
-                    href="mailto:hello@startonlinelab.com?subject=Konsultacja%2015%20min"
+                    href="mailto:hello@online-lab.com?subject=Konsultacja%2015%20min"
                     className="text-slate-600 hover:text-slate-900 transition-colors"
                   >
                     Umów konsultację

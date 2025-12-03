@@ -50,11 +50,11 @@ export default function SiteFooter() {
             </h3>
             <div className="flex flex-col space-y-3">
               <a
-                href="mailto:hello@online-lab.pl"
+                href="mailto:hello@online-lab.com"
                 className="flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors group"
               >
                 <Mail className="w-4 h-4 text-slate-400 group-hover:text-slate-600 transition-colors" />
-                <span>hello@online-lab.pl</span>
+                <span>hello@online-lab.com</span>
               </a>
               <p className="text-xs text-slate-500 pt-2">
                 Zwykle odpowiadamy w 24 godziny

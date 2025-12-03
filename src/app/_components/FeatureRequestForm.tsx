@@ -78,7 +78,7 @@ export default function FeatureRequestForm() {
         throw new Error('Failed to submit');
       }
     } catch (error) {
-      setErrors(["Wystąpił błąd. Spróbuj ponownie lub napisz bezpośrednio na hello@online-lab.pl"]);
+      setErrors(["Wystąpił błąd. Spróbuj ponownie lub napisz bezpośrednio na hello@online-lab.com"]);
     } finally {
       setIsSubmitting(false);
     }

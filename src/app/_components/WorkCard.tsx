@@ -34,7 +34,6 @@ export default function WorkCard({ work }: { work: Work }) {
               sizes="(min-width:1024px) 33vw, (min-width:640px) 50vw, 100vw"
               className="object-contain p-2"
               quality={90}
-              style={{ imageRendering: "high-quality" }}
             />
           </div>
         </div>

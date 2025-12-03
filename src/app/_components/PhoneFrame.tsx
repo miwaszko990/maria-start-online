@@ -31,7 +31,6 @@ export default function PhoneFrame({
           sizes={sizes}
           quality={90}
           className="object-cover"
-          style={{ imageRendering: "high-quality" }}
         />
       </div>
     </div>

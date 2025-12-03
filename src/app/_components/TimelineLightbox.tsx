@@ -77,7 +77,6 @@ export default function TimelineLightbox({
                     sizes="100vw"
                     quality={95}
                     className="object-contain"
-                    style={{ imageRendering: "high-quality" }}
                     priority
                   />
                 </div>

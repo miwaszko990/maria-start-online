@@ -28,7 +28,6 @@ export function BrowserFrame({
         sizes={sizes} 
         className="object-cover pt-8" 
         quality={95}
-        style={{ imageRendering: "high-quality" }}
       />
     </div>
   );
@@ -53,7 +52,6 @@ export function PhoneFrame({
         className="object-cover" 
         sizes="160px"
         quality={95}
-        style={{ imageRendering: "high-quality" }}
       />
     </div>
   );

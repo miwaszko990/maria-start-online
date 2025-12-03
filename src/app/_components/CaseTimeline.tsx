@@ -84,7 +84,6 @@ export default function CaseTimeline({ steps }: CaseTimelineProps) {
                         sizes="(min-width:1024px) 40vw, 90vw"
                         className="object-contain p-2"
                         quality={90}
-                        style={{ imageRendering: "high-quality" }}
                       />
                     </div>
                   </div>

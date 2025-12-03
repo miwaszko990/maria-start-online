@@ -63,7 +63,6 @@ export default function GalleryLightbox({
                     sizes="(min-width:1024px) 80vw, 95vw"
                     quality={95}
                     className="object-contain"
-                    style={{ imageRendering: "high-quality" }}
                     priority
                   />
                 </div>

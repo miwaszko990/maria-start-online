@@ -42,7 +42,6 @@ export default function BrowserFrame({
         sizes={sizes}
         quality={90}
         className="object-cover pt-8"
-        style={{ imageRendering: "high-quality" }}
       />
     </div>
   );

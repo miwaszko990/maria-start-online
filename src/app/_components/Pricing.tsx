@@ -51,11 +51,16 @@ function PricingCard({
       const { sessionId } = await response.json();
       
       // Redirect to Stripe Checkout
-      const stripe = (await import('@stripe/stripe-js')).loadStripe(
+      const stripe = await (await import('@stripe/stripe-js')).loadStripe(
         process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY!
       );
       
-      const { error } = await (await stripe).redirectToCheckout({
+      if (!stripe) {
+        console.error('Stripe failed to load');
+        return;
+      }
+
+      const { error } = await stripe.redirectToCheckout({
         sessionId,
       });
 

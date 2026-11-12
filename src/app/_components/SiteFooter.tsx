@@ -3,7 +3,7 @@ import { Mail } from "lucide-react";
 
 export default function SiteFooter() {
   const navigationLinks = [
-    { href: "#package", label: "Pakiet" },
+    { href: "#package", label: "Co dostajesz" },
     { href: "#process", label: "Proces" },
     { href: "#work", label: "Portfolio" },
     { href: "#pricing", label: "Cennik" },
@@ -21,7 +21,7 @@ export default function SiteFooter() {
               Online Lab
             </Link>
             <p className="text-sm text-slate-600 leading-relaxed">
-              Tworzymy sklepy Shopify i strony landing, które naprawdę sprzedają. Kompletny system sprzedażowy gotowy w 8 dni.
+              Projektujemy i budujemy sklepy internetowe oraz strony dla marek. Gotowe w 8 dni, w stałej cenie.
             </p>
           </div>
 
@@ -50,14 +50,14 @@ export default function SiteFooter() {
             </h3>
             <div className="flex flex-col space-y-3">
               <a
-                href="mailto:hello@online-lab.com"
+                href="mailto:hello@online-lab.pl"
                 className="flex items-center gap-2 text-sm text-slate-600 hover:text-slate-900 transition-colors group"
               >
                 <Mail className="w-4 h-4 text-slate-400 group-hover:text-slate-600 transition-colors" />
-                <span>hello@online-lab.com</span>
+                <span>hello@online-lab.pl</span>
               </a>
               <p className="text-xs text-slate-500 pt-2">
-                Zwykle odpowiadamy w 24 godziny
+                Zwykle odpowiadamy w ciągu 24 godzin
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ export default function SiteFooter() {
         <div className="mt-12 pt-8 border-t border-gray-200">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-sm text-slate-500">
-              © 2024 Online Lab. Wszelkie prawa zastrzeżone.
+              © {new Date().getFullYear()} Online Lab. Wszelkie prawa zastrzeżone.
             </p>
             <div className="flex gap-6">
               <a

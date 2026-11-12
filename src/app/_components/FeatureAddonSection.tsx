@@ -6,27 +6,27 @@ import FeatureRequestForm from "./FeatureRequestForm";
 export default function FeatureAddonSection() {
   const processSteps = [
     {
-      title: "Opisz potrzebę",
-      description: "prześlij krótki opis i screen"
+      title: "Opisz, czego potrzebujesz",
+      description: "wyślij krótki opis i zrzut ekranu"
     },
     {
-      title: "Szybka wycena",
-      description: "odeślę zakres i termin (zwykle 1–3 dni)"
+      title: "Wycena",
+      description: "odeślemy zakres, cenę i termin (zwykle w 1–3 dni)"
     },
     {
       title: "Realizacja",
-      description: "po zaliczce 50% wdrożenie i testy"
+      description: "po wpłacie 50% zaliczki wdrażamy zmianę i sprawdzamy, czy działa"
     }
   ];
 
   const exampleFeatures = [
-    "Custom stopka lub header",
-    "Kalendarz rezerwacji na product page",
+    "Nowe menu lub stopka strony",
+    "Kalendarz rezerwacji przy produkcie lub usłudze",
     "Sekcja opinii klientów / FAQ",
-    "Integracja newslettera (Klaviyo / Mailchimp)",
-    "IG feed / social proof",
-    "Usprawnienia checkoutu / mini-koszyk",
-    "Blog preview / karta kolekcji",
+    "Zapis na newsletter",
+    "Zdjęcia z Instagrama i opinie na stronie",
+    "Wygodniejszy koszyk i płatność",
+    "Podgląd bloga lub kolekcji",
     "Inne – opisz, co potrzebujesz"
   ];
 
@@ -36,10 +36,10 @@ export default function FeatureAddonSection() {
         {/* Header */}
         <div className="text-center mb-10">
           <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-gray-900 mb-2">
-            Masz już stronę, ale chcesz dodać coś nowego?
+            Masz już stronę i chcesz coś dodać lub zmienić?
           </h2>
           <p className="text-sm text-gray-500">
-            Feature na życzenie – od 500 zł. Dokładna wycena po krótkiej rozmowie.
+            Nowa funkcja na Twojej stronie – od 500 zł. Dokładna wycena po krótkiej rozmowie.
           </p>
         </div>
 
@@ -50,7 +50,7 @@ export default function FeatureAddonSection() {
             {/* Process Steps Card */}
             <div className="rounded-3xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition p-5 sm:p-6">
               <h3 className="text-base font-medium text-gray-900 mb-4">
-                3 kroki do nowej funkcjonalności
+                3 kroki do zmiany na stronie
               </h3>
               <div className="space-y-3">
                 {processSteps.map((step, index) => (
@@ -72,7 +72,7 @@ export default function FeatureAddonSection() {
             {/* Example Features Card */}
             <div className="rounded-3xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition p-5 sm:p-6">
               <h3 className="text-base font-medium text-gray-900 mb-4">
-                Przykładowe funkcjonalności
+                Co możemy dodać, na przykład
               </h3>
               <ul className="space-y-2">
                 {exampleFeatures.map((feature, index) => (

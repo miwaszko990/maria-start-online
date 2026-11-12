@@ -78,7 +78,7 @@ export default function FeatureRequestForm() {
         throw new Error('Failed to submit');
       }
     } catch (error) {
-      setErrors(["Wystąpił błąd. Spróbuj ponownie lub napisz bezpośrednio na hello@online-lab.com"]);
+      setErrors(["Wystąpił błąd. Spróbuj ponownie lub napisz bezpośrednio na hello@online-lab.pl"]);
     } finally {
       setIsSubmitting(false);
     }
@@ -98,7 +98,7 @@ export default function FeatureRequestForm() {
         <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
           <Check className="w-6 h-6 text-green-600" />
         </div>
-        <h4 className="text-base font-medium text-gray-900 mb-2">Dziękuję!</h4>
+        <h4 className="text-base font-medium text-gray-900 mb-2">Dziękujemy!</h4>
         <p className="text-sm text-gray-600">Wrócę z wyceną w 24 h.</p>
       </div>
     );
@@ -186,7 +186,7 @@ export default function FeatureRequestForm() {
       {/* Assets URL */}
       <div>
         <label htmlFor="assetsUrl" className="block text-sm font-medium text-gray-900 mb-1">
-          Link do screenów
+          Link do zrzutów ekranu
         </label>
         <input
           id="assetsUrl"
@@ -262,7 +262,7 @@ export default function FeatureRequestForm() {
 
       {/* Helper text */}
       <p className="text-xs text-gray-500 text-center">
-        Zwykle odpowiadamy w 24 h. Typowy zakres 500–1000 zł. Po akceptacji wyceny – zaliczka 50% przez Stripe (Payment Link).
+        Zwykle odpowiadamy w ciągu 24 h. Typowy koszt to 500–1000 zł. Po akceptacji wyceny płacisz 50% zaliczki przez link do płatności.
       </p>
     </form>
   );

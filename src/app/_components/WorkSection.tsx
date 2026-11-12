@@ -9,7 +9,7 @@ export default function WorkSection() {
         <div className="text-[11px] sm:text-xs uppercase tracking-widest text-slate-500 mb-2">Portfolio</div>
         <h2 className="text-3xl sm:text-4xl font-bold tracking-tight mb-3">Wybrane realizacje</h2>
         <p className="text-slate-600 max-w-2xl mx-auto text-sm sm:text-base">
-          Sklepy i strony, które sprzedają. Zobacz, jak pomagamy markom zwiększać sprzedaż, lojalność i rozpoznawalność.
+          Sklepy i strony, które zaprojektowaliśmy i zbudowaliśmy. Kliknij, żeby zobaczyć szczegóły.
         </p>
       </div>
       <div className="grid gap-6 sm:gap-7 md:grid-cols-2 lg:grid-cols-3">

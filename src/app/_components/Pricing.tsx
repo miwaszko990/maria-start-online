@@ -58,12 +58,12 @@ function PricingCard({
             className="w-full bg-black text-white hover:bg-black/90 transition-colors"
             aria-label={ctaAriaLabel}
           >
-            <a href="mailto:hello@online-lab.com?subject=Zapytanie o pakiet">
+            <a href="mailto:hello@online-lab.pl?subject=Zapytanie%20o%20pakiet">
               Kontakt
             </a>
           </Button>
           <p className="text-xs text-muted-foreground mt-2">
-            💡 Napisz do nas, a otrzymasz szczegóły dotyczące realizacji projektu i płatności.
+            💡 Napisz do nas, a odeślemy szczegóły realizacji i płatności.
           </p>
           <p className="text-xs text-slate-500 text-center">
             Stała cena, zero ukrytych kosztów.
@@ -76,15 +76,15 @@ function PricingCard({
 
 export default function Pricing() {
   const startPackage: PricingCardProps = {
-    title: "Pakiet Start – Wizytówka / Landing",
+    title: "Pakiet Start – strona-wizytówka",
     price: "750 zł",
     emoji: "💰",
-    valueLine: "Prosta strona, która daje Ci widoczność online i pierwszych klientów.",
+    valueLine: "Prosta strona, dzięki której klienci znajdą Cię w internecie i łatwo się z Tobą skontaktują.",
     checklist: [
-      "1 strona typu one-page (do 5 sekcji: oferta, opinie, kontakt, mapa/IG feed)",
-      "Mobile-first (świetny wygląd na telefonach)",
-      "Formularz kontaktowy / integracja z social media",
-      "Możliwość stworzenia landing page do sprzedaży ebooka, kursu lub eventu"
+      "Jedna przewijana strona z maks. 5 sekcjami: oferta, opinie, kontakt, mapa lub zdjęcia z Instagrama",
+      "Świetnie wygląda na telefonie",
+      "Formularz kontaktowy i linki do Twoich social mediów",
+      "Może też służyć do sprzedaży e-booka, kursu albo biletów na wydarzenie"
     ],
     timeText: "⏱ Realizacja: 3–5 dni",
     ctaText: "Kontakt",
@@ -92,17 +92,17 @@ export default function Pricing() {
   };
 
   const proPackage: PricingCardProps = {
-    title: "Pakiet Pro – Sklep Online",
+    title: "Pakiet Pro – sklep internetowy",
     price: "1499 zł",
     emoji: "💰",
-    valueLine: "Gotowy sklep internetowy, który zaczyna sprzedawać od pierwszego dnia.",
+    valueLine: "Twój własny sklep, gotowy do przyjmowania zamówień od pierwszego dnia.",
     checklist: [
-      "Sklep do 10 produktów (koszyk + checkout)",
-      "Płatności online (Stripe / Przelewy24 / BLIK)",
-      "Newsletter (Klaviyo / Mailchimp)",
-      "Wdrożenie na domenie + konfiguracja hostingu",
+      "Sklep z maks. 10 produktami, koszykiem i płatnością",
+      "Płatności BLIK-iem, kartą i szybkim przelewem",
+      "Newsletter do zbierania maili klientów (Klaviyo lub Mailchimp)",
+      "Uruchomienie pod Twoim adresem www",
       "2 rundy poprawek w cenie",
-      "Mini-tutorial obsługi sklepu"
+      "Krótka instrukcja wideo, jak obsługiwać sklep"
     ],
     timeText: "⏱ Realizacja: 8 dni",
     ctaText: "Kontakt",

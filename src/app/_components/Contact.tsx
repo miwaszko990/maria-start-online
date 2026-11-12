@@ -58,7 +58,7 @@ export default function ContactSection() {
         }),
       });
 
-      toast.success("Dziękuję! Odezwę się wkrótce.");
+      toast.success("Dziękujemy! Odezwiemy się wkrótce.");
       reset();
     } catch (error) {
       toast.error("Ups, spróbuj ponownie za chwilę.");
@@ -75,7 +75,7 @@ export default function ContactSection() {
             Kontakt
           </h2>
           <p className="text-muted-foreground text-center mb-12">
-            Masz pytanie lub chcesz zacząć projekt? Napisz – odpisuję zwykle tego samego dnia.
+            Masz pytanie lub chcesz zacząć projekt? Napisz – zwykle odpisujemy tego samego dnia.
           </p>
         </div>
 
@@ -203,7 +203,7 @@ export default function ContactSection() {
                 <div className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-slate-500" />
                   <a
-                    href="mailto:hello@online-lab.com"
+                    href="mailto:hello@online-lab.pl"
                     className="text-slate-600 hover:text-slate-900 transition-colors"
                   >
                     E-mail
@@ -214,7 +214,7 @@ export default function ContactSection() {
                 <div className="flex items-center gap-3">
                   <Calendar className="w-4 h-4 text-slate-500" />
                   <a
-                    href="mailto:hello@online-lab.com?subject=Konsultacja%2015%20min"
+                    href="mailto:hello@online-lab.pl?subject=Konsultacja%2015%20min"
                     className="text-slate-600 hover:text-slate-900 transition-colors"
                   >
                     Umów konsultację
@@ -225,7 +225,7 @@ export default function ContactSection() {
 
               <div className="mt-8 pt-6 border-t border-black/10">
                 <p className="text-sm text-slate-500">
-                  Zwykle odpowiadamy w 24 godziny.
+                  Zwykle odpowiadamy w ciągu 24 godzin.
                 </p>
               </div>
             </div>

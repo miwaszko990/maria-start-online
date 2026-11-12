@@ -40,51 +40,51 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
               steps={work.slug === "laroue-shopify" ? [
                 {
                   id: "sticky-header",
-                  title: "Spersonalizowany, dynamiczny nagłówek",
-                  description: "Sticky header, który podczas scrollowania zmienia kolor i styl. Płynne przejścia, lepsze UX i profesjonalny wygląd na wszystkich urządzeniach.",
+                  title: "Menu, które idzie za klientką",
+                  description: "Menu zostaje na górze ekranu podczas przewijania i płynnie zmienia wygląd. Koszyk i nawigacja są zawsze pod ręką, na telefonie i komputerze.",
                   image: work.coverMobile,
                   alt: `${work.title} — Dynamiczny nagłówek`
                 },
                 {
                   id: "rewards-club",
-                  title: "Klub lojalnościowy — Punkty i działania",
-                  description: "Zbudowaliśmy kompletny system lojalnościowy z siatką punktów i nagrodami. Motywuje klientów do powrotu i zaangażowania.",
+                  title: "Klub lojalnościowy: punkty i nagrody",
+                  description: "Kompletny program lojalnościowy: klientki zbierają punkty za zakupy i wymieniają je na nagrody. Daje im powód, żeby wracać.",
                   image: "/work/laroue-rewards.png",
                   alt: `${work.title} — Siatka klubu lojalnościowego`
                 },
                 {
                   id: "custom-footer",
-                  title: "Niestandardowa stopka + Instagram",
-                  description: "Zapisy na newsletter, linki zoptymalizowane pod SEO i karuzela Instagram. W pełni personalizowana sekcja stopki po markę.",
+                  title: "Stopka z newsletterem i Instagramem",
+                  description: "Zapis na newsletter, przydatne linki i przewijane zdjęcia z Instagrama marki. Stopka zaprojektowana pod styl La Roue.",
                   image: "/work/laroue-footer.png",
                   alt: `${work.title} — Niestandardowa stopka z Instagramem`
                 },
                 {
                   id: "custom-hero",
-                  title: "Dopasowany nagłówek według życzenia klienta",
-                  description: "Zaprojektowaliśmy i wdrożyliśmy unikalny nagłówek strony głównej zgodnie z wizją marki. Spójny z brandingiem, przyciągający wzrok i idealnie komponujący się z całą stroną.",
+                  title: "Strona główna zaprojektowana pod markę",
+                  description: "Zaprojektowaliśmy i wdrożyliśmy pierwszy ekran strony głównej zgodnie z wizją marki: spójny z jej stylem i przyciągający wzrok.",
                   image: "/work/laroue-heroo.png",
                   alt: `${work.title} — Niestandardowy nagłówek hero`
                 }
               ] : work.slug === "lumo-landing" ? [
                 {
                   id: "hero-section",
-                  title: "Sekcja Hero — Globalny przekaz",
-                  description: "Globalny zasięg z jasnym pozycjonowaniem marki i wezwaniem do działania.",
+                  title: "Pierwszy ekran: jasny przekaz",
+                  description: "Od razu mówi, czym jest aplikacja i co zrobić dalej.",
                   image: "/work/lumo-hero.png",
                   alt: `${work.title} — Sekcja Hero`
                 },
                 {
                   id: "stats-discovery",
-                  title: "Statystyki i Odkrywanie",
-                  description: "Wiarygodność marketplace z profilami twórców i dowodami społeczności.",
+                  title: "Liczby i profile twórców",
+                  description: "Profile twórców i liczby, które pokazują, że platforma żyje.",
                   image: "/work/lumo-stats.png",
                   alt: `${work.title} — Statystyki i odkrywanie`
                 },
                 {
                   id: "creators-benefits",
                   title: "Dla Twórców — Korzyści",
-                  description: "Prosta, zorientowana na korzyści sekcja wyjaśniająca jak twórcy zarabiają.",
+                  description: "Prosta sekcja, która wyjaśnia, jak twórcy zarabiają.",
                   image: "/work/lumo-creators.png",
                   alt: `${work.title} — Korzyści dla twórców`
                 }
@@ -99,20 +99,20 @@ export default async function WorkPage({ params }: { params: Promise<{ slug: str
                 {
                   id: "usp-section",
                   title: "Co zyskujesz",
-                  description: "Jasno pokazujemy, dlaczego warto Ci zaufać.",
+                  description: "Jasno pokazuje, dlaczego warto zaufać marce.",
                   image: "/work/worldtok-usp.png",
                   alt: `${work.title} — Co zyskujesz`
                 },
                 {
                   id: "process-proof",
                   title: "Jak to działa w praktyce",
-                  description: "Przejrzysty proces krok po kroku, poparty realnymi wynikami marek z wielu krajów.",
+                  description: "Proces współpracy rozpisany krok po kroku.",
                   image: "/work/worldtok-steps.png",
                   alt: `${work.title} — Jak to działa`
                 },
                 {
                   id: "social-proof",
-                  title: "Sprawdzone efekty na wielu rynkach",
+                  title: "Wyrazisty wygląd",
                   description: "Wyrazisty design, który wyróżnia Twoją markę na tle konkurencji.",
                   image: "/work/worldtok-proof.png",
                   alt: `${work.title} — Sprawdzone efekty`

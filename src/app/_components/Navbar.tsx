@@ -15,10 +15,10 @@ return () => window.removeEventListener("resize", onResize);
 }, []);
 
 const nav = [
-{ href: "#package", label: "Pakiet" },
+{ href: "#package", label: "Co dostajesz" },
 { href: "#process", label: "Proces" },
 { href: "#work", label: "Portfolio" },
-{ href: "#price", label: "Cennik" },
+{ href: "#pricing", label: "Cennik" },
 { href: "#faq", label: "FAQ" },
 { href: "#contact", label: "Kontakt" },
 ];
@@ -43,7 +43,7 @@ Online Lab
 {/* CTA Button - Far Right */}
 <div className="hidden md:block">
 <Button asChild>
-<a href="mailto:hello@online-lab.com?subject=Konsultacja%2015%20min">
+<a href="mailto:hello@online-lab.pl?subject=Konsultacja%2015%20min">
 Umów konsultację
 </a>
 </Button>
@@ -76,7 +76,7 @@ className="py-2 rounded-md hover:bg-slate-100 px-2 focus:outline-none focus-visi
 ))} 
 <Button asChild className="mt-4">
 <a 
-href="mailto:hello@online-lab.com?subject=Konsultacja%2015%20min"
+href="mailto:hello@online-lab.pl?subject=Konsultacja%2015%20min"
 onClick={() => setOpen(false)}
 >
 Umów konsultację

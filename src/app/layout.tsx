@@ -1,21 +1,43 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
+import "./lab.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const plexSans = IBM_Plex_Sans({
+  variable: "--font-plex-sans",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const plexMono = IBM_Plex_Mono({
+  variable: "--font-plex-mono",
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
+  display: "swap",
 });
+
+const title = "Projektowanie sklepów internetowych na Shopify · gotowe w 3 dni | Online Lab";
+const description =
+  "Projektujemy, budujemy i uruchamiamy sklepy internetowe dla nowych marek i tych, które wyrosły z Instagrama. BLIK, newsletter i statystyki w pakiecie. Sklep gotowy w 3 dni, stała cena.";
 
 export const metadata: Metadata = {
-  title: "Online Lab - Sklepy Shopify i strony landing",
-  description: "Kompletny system sprzedażowy w 8 dni. Sklepy Shopify i strony landing z płatnościami, Klaviyo i analytics.",
+  metadataBase: new URL("https://online-lab.pl"),
+  title,
+  description,
+  alternates: { canonical: "/" },
+  openGraph: {
+    type: "website",
+    locale: "pl_PL",
+    url: "https://online-lab.pl",
+    siteName: "Online Lab",
+    title,
+    description,
+    images: [{ url: "/work/laroue-heroo.png", width: 1200, height: 630, alt: "Sklep La Roue zaprojektowany przez Online Lab" }],
+  },
+  twitter: { card: "summary_large_image", title, description, images: ["/work/laroue-heroo.png"] },
+  robots: { index: true, follow: true },
 };
 
 export default function RootLayout({
@@ -24,10 +46,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased scroll-smooth`}
-      >
+    <html lang="pl">
+      <body className={`${plexSans.variable} ${plexMono.variable} lab antialiased`}>
         {children}
         <Toaster position="top-right" />
       </body>

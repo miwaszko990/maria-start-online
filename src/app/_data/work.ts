@@ -14,14 +14,14 @@ export type Work = {
 export const works: Work[] = [
   {
     slug: "laroue-shopify",
-    title: "La ROUE — Sklep, który sprzedaje więcej dzięki lojalności.",
-    subtitle: "Kompletny sklep Shopify z autorskim programem punktowym i dopracowanym UX mobilnym. Efekt: wyższa konwersja i powracający klienci.",
+    title: "La ROUE — sklep z programem punktów dla stałych klientek.",
+    subtitle: "Kompletny sklep na Shopify dla marki odzieżowej. Klientki zbierają punkty za zakupy, a sklep jest dopracowany pod zakupy na telefonie.",
     bullets: [
-      "Spersonalizowany, dynamiczny nagłówek (sticky header).",
-      "Program lojalnościowy — Punkty i nagrody.",
-      "Personalizowana stopka z integracją Instagrama",
-      "Dopasowany nagłówek hero według życzenia klienta"],
-    tags: ["Shopify", "Custom UX", "Loyalty", "SEO"],
+      "Menu, które zostaje na górze ekranu podczas przewijania.",
+      "Program lojalnościowy: punkty i nagrody za zakupy.",
+      "Stopka ze zdjęciami prosto z Instagrama marki.",
+      "Duże zdjęcie powitalne zaprojektowane pod markę."],
+    tags: ["Shopify", "Program lojalnościowy", "Wersja na telefon"],
     cover: "/work/laroue-rewards.png",
     coverMobile: "/work/laroue-mobile.jpg",
     extra: "/work/laroue-footer.png",
@@ -30,13 +30,13 @@ export const works: Work[] = [
   {
     slug: "lumo-landing",
     title: "Lumo — Platforma łącząca marki z twórcami podróżującymi po świecie.",
-    subtitle: "Landing page zaprojektowany w Next.js jako część MVP aplikacji Lumo Travel Connect. Efekt: profesjonalna prezentacja startupu i skuteczne pozyskanie pierwszych użytkowników.",
+    subtitle: "Strona startowa nowej aplikacji Lumo Travel Connect. Jej zadanie: jasno wytłumaczyć, czym jest aplikacja, i zachęcić pierwszych użytkowników do zapisu.",
     bullets: [
-      "Minimalistyczna, zorientowana na konwersję strona landing",
-      "Jasne pozycjonowanie marki i copywriting", 
-      "Responsywna, przyjazna SEO implementacja"
+      "Prosta strona prowadząca do jednego celu: zapisu.",
+      "Teksty, które w kilka sekund mówią, co to jest i dla kogo.", 
+      "Działa na telefonie i komputerze, przygotowana pod Google."
     ],
-    tags: ["Next.js", "Marketplace", "UX"],
+    tags: ["Strona startowa", "Aplikacja", "Projekt"],
     cover: "/work/lumo-hero.png",
     coverMobile: "/work/lumo-hero.png",
     extra: "/work/lumo-stats.png",
@@ -44,15 +44,15 @@ export const works: Work[] = [
   },
   {
     slug: "worldtok-landing",
-    title: "WorldTok — Strona, która przyciąga globalnych klientów.",
-    subtitle: "Projekt w Webflow podkreślający międzynarodowy zasięg marki i jej wiarygodność. Efekt: spójny wizerunek, większe zaufanie i gotowość do ekspansji zagranicznej.",
+    title: "WorldTok — strona dla firmy działającej na wielu rynkach.",
+    subtitle: "Strona zbudowana w Webflow, która pokazuje międzynarodowy zasięg marki i buduje zaufanie klientów z różnych krajów.",
     bullets: [
-      "Sekcja otwierająca, która od razu buduje zaufanie i przyciąga klientów.",
-      "Jasno pokazujemy, dlaczego warto Ci zaufać.",
-      "Przejrzysty proces krok po kroku, poparty realnymi wynikami marek z wielu krajów.",
-      "Wyrazisty design, który wyróżnia Twoją markę na tle konkurencji."
+      "Pierwszy ekran, który od razu mówi, czym zajmuje się firma.",
+      "Sekcja z dowodami: wyniki i opinie klientów.",
+      "Proces współpracy rozpisany krok po kroku.",
+      "Wyrazisty wygląd, który odróżnia markę od konkurencji."
     ],
-    tags: ["Webflow", "Design", "Strona Landing"],
+    tags: ["Webflow", "Projekt", "Strona firmowa"],
     cover: "/work/worldtok-hero.png",       // hero
     coverMobile: "/work/worldtok-steps.png",// process
     extra: "/work/worldtok-proof.png",      // social proof

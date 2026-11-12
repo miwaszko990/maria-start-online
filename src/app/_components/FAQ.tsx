@@ -10,57 +10,57 @@ export default function FAQ() {
     {
       id: "duration",
       question: "Ile to trwa?",
-      answer: "Zależnie od pakietu: Start 3–5 dni, Pro ok. 8 dni. Zaczynamy po otrzymaniu zaliczki i materiałów (logo, teksty, zdjęcia)."
+      answer: "Zależnie od pakietu: Start 3–5 dni, Pro ok. 8 dni. Zaczynamy, gdy dostaniemy zaliczkę i materiały (logo, teksty, zdjęcia)."
     },
     {
       id: "materials",
       question: "Co muszę przygotować?",
-      answer: "Logo, krótkie teksty do sekcji, zdjęcia/brand assets oraz dostęp do domeny. Jeśli nie masz materiałów, pomożemy je przygotować."
+      answer: "Logo, zdjęcia produktów, kilka zdań o marce i ofercie oraz dostęp do adresu strony (domeny), jeśli już go masz. Jeśli czegoś brakuje, pomożemy to przygotować."
     },
     {
       id: "payment",
       question: "Jak wygląda płatność?",
-      answer: "Na start pobieramy zaliczkę 50% (przez link do płatności). Reszta po akceptacji projektu, przed publikacją."
+      answer: "Na start płacisz 50% zaliczki przez link do płatności. Resztę po akceptacji projektu, przed uruchomieniem strony."
     },
     {
       id: "revisions",
       question: "Czy są poprawki w cenie?",
-      answer: "Tak. Pakiet Start – 1 runda drobnych zmian, Pro – 2 rundy poprawek. Większe zmiany wycenimy osobno."
+      answer: "Tak. Pakiet Start – 1 runda drobnych zmian, Pro – 2 rundy poprawek. Większe zmiany wyceniamy osobno."
     },
     {
       id: "mobile",
       question: "Czy strona będzie działać na telefonie?",
-      answer: "Tak, projektujemy mobile-first. Strona będzie wyglądać i działać świetnie na telefonach, tabletach i desktopie."
+      answer: "Tak. Projektujemy najpierw pod telefon, potem pod komputer. Strona działa dobrze na telefonie, tablecie i komputerze."
     },
     {
       id: "hosting",
-      question: "Domena i hosting – kto się tym zajmuje?",
-      answer: "Możemy to skonfigurować za Ciebie (w ramach pakietu). Jeśli masz już hosting/domenę – podłączymy wszystko pod istniejące zasoby."
+      question: "Kto zajmie się adresem strony (domeną)?",
+      answer: "My. Pomożemy kupić adres strony (domenę) i wszystko podłączymy w ramach pakietu. Jeśli masz już domenę, podepniemy sklep pod nią."
     },
     {
       id: "payments-newsletter",
-      question: "Płatności i newsletter w sklepie (Pro)?",
-      answer: "Wdrażamy Stripe/Przelewy24/BLIK oraz integrację newslettera (Klaviyo/Mailchimp). Po wdrożeniu dostaniesz krótki mini-tutorial."
+      question: "Czy w sklepie będą płatności i newsletter?",
+      answer: "Tak. Podłączamy płatności BLIK-iem, kartą i szybkim przelewem (Przelewy24 lub Stripe) oraz newsletter (Klaviyo lub Mailchimp). Na koniec dostajesz krótką instrukcję wideo."
     },
     {
       id: "seo-analytics",
-      question: "SEO i analityka",
-      answer: "Ustawimy podstawowe SEO (title/description, meta, ALT) i podłączymy Google Analytics/Tag Manager, abyś widział/a statystyki."
+      question: "Czy klienci znajdą mnie w Google? Czy zobaczę statystyki?",
+      answer: "Ustawiamy podstawy, dzięki którym Google może znaleźć i dobrze opisać Twój sklep. Podłączamy też statystyki: zobaczysz, ile osób odwiedza stronę, skąd przychodzą i co kupują."
     },
     {
       id: "editing",
       question: "Czy mogę samodzielnie edytować treści?",
-      answer: "Tak. Przy prostych zmianach pokażemy, jak je robić. Przy rozbudowie/nowych sekcjach możesz zlecić nam prace godzinowo."
+      answer: "Tak. Pokażemy Ci, jak samodzielnie zmieniać teksty, zdjęcia i produkty. Większe zmiany, np. nowe sekcje, możesz zlecić nam osobno."
     },
     {
       id: "invoice-warranty",
-      question: "Faktura i gwarancja",
-      answer: "Wystawiamy fakturę. Przez 14 dni od publikacji usuwamy ewentualne błędy bez kosztów (nie dotyczy zmian funkcjonalnych)."
+      question: "Czy dostanę fakturę? Co jeśli coś przestanie działać?",
+      answer: "Tak, wystawiamy fakturę. Przez 14 dni od uruchomienia bezpłatnie naprawiamy błędy. Nie dotyczy to nowych funkcji ani zmian zakresu."
     },
     {
       id: "post-deposit",
       question: "Co dzieje się po wpłacie zaliczki?",
-      answer: "Otrzymasz e-mail z formularzem, w którym podasz szczegóły projektu i prześlesz wszystkie materiały, które masz (logo, zdjęcia, teksty). Dzięki temu możemy zacząć prace sprawnie i bez zbędnych pytań."
+      answer: "Otrzymasz e-mail z formularzem, w którym podasz szczegóły projektu i prześlesz wszystkie materiały, które masz (logo, zdjęcia, teksty). Dzięki temu możemy zacząć od razu, bez zbędnych pytań."
     }
   ];
 

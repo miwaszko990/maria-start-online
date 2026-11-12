@@ -110,8 +110,18 @@ body.lab {
 .browser__dot { width: 8px; height: 8px; border-radius: 50%; background: #bdbdb7; }
 .browser__url { margin-left: 10px; font-size: 10px; color: var(--mute); }
 .browser img { width: 100%; height: auto; display: block; aspect-ratio: 16 / 9.4; object-fit: cover; object-position: top; }
-.phone { border-radius: 24px; border: 6px solid var(--ink); overflow: hidden; background: #f1efe9; box-shadow: 0 24px 50px -24px rgba(17, 17, 17, 0.5); }
-.phone img { width: 100%; height: auto; display: block; }
+.phone {
+  /* proporcje iPhone (402 × 874 pt) */
+  container-type: inline-size; box-sizing: border-box; background: #111111;
+  border-radius: 17% / 7.9%; box-shadow: 0 24px 50px -24px rgba(17, 17, 17, 0.55), inset 0 0 0 1px #3a3a37;
+}
+.phone__screen { margin: 3.6cqw; position: relative; aspect-ratio: 402 / 874; overflow: hidden; border-radius: 13.5% / 6.2%; }
+.phone__screen::before {
+  content: ""; position: absolute; z-index: 2; top: 2.8cqw; left: 50%; transform: translateX(-50%);
+  width: 29cqw; height: 8.4cqw; border-radius: 99px; background: #111111;
+}
+.phone__status { height: 13.5cqw; display: flex; align-items: center; padding: 0 0 0 11cqw; font-size: 4.2cqw; font-weight: 600; color: #111111; }
+.phone__screen img { width: 100%; height: auto; display: block; }
 .stage-anim { animation: lab-fade 0.5s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
 @keyframes lab-fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
 
@@ -245,10 +255,56 @@ body.lab {
   .pick__row { flex-direction: column; align-items: flex-start; gap: 4px; }
   .pricing .tab__name { font-size: 14px !important; }
   .status .wrap > span:nth-child(n+3) { display: none; }
-  .switcher__stage { min-height: 300px; }
-  .phone { border-width: 4px; border-radius: 18px; }
+  .switcher__stage { min-height: 300px; gap: 8px; padding: 20px 12px; }
   .spec__intro { position: static; }
   .switcher__info { border-left: none; border-top: 1px solid var(--line-2); }
   .pricing__left { border-right: none; border-bottom: 1px solid var(--line-2); }
   .float .btn--next { display: none; }
 }
+
+/* demo: fragment sklepu Kumo w telefonie */
+.bdemo { display: flex; flex-wrap: wrap; border: 1px solid var(--line-2); background: var(--panel); }
+.bdemo__stage { flex: 1 1 440px; background: var(--stage); padding: clamp(24px, 4vw, 48px) 20px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.bdemo__try { margin: 0; font-size: 11px; letter-spacing: 0.08em; color: var(--accent); animation: lab-nudge 1.8s ease-in-out infinite; }
+@keyframes lab-nudge { 50% { transform: translateY(4px); } }
+.bdemo__phone { width: min(340px, 82vw); }
+.bdemo__notes { flex: 1 1 360px; padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; gap: 24px; justify-content: center; }
+.bdemo__notes ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.bdemo__notes li { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--ink-2); font-size: 16px; }
+.bdemo__notes strong { color: var(--ink); font-size: 18px; }
+.bdemo__n { flex: 0 0 22px; color: var(--accent); font-size: 12px; padding-top: 4px; }
+.bdemo__tiers { margin: 0; font-size: 12px; color: var(--mute); }
+.bdemo .btn { align-self: flex-start; }
+
+.kumo { --k-ink: #1f2419; --k-bg: #efefeb; --k-green: #4f6b2e; background: var(--k-bg); color: var(--k-ink); display: flex; flex-direction: column; }
+.kumo .phone__status { flex: none; }
+.kumo__bar { flex: none; display: flex; justify-content: space-between; align-items: center; padding: 2cqw 5cqw 3cqw; border-bottom: 1px solid rgba(31, 36, 25, 0.15); font-size: 4.4cqw; }
+.kumo__logo { font-family: Georgia, "Times New Roman", serif; letter-spacing: 0.14em; font-size: 4.6cqw; }
+.kumo__cart { position: relative; display: inline-flex; font-size: 5.6cqw; }
+.kumo__cart b { position: absolute; right: -2.4cqw; bottom: -1.6cqw; background: var(--k-ink); color: #fff; font-size: 2.6cqw; border-radius: 99px; min-width: 4cqw; height: 4cqw; display: grid; place-items: center; font-family: var(--font-plex-sans), sans-serif; }
+.kumo__body { flex: 1 1 auto; min-height: 0; overflow-y: auto; padding: 4cqw 5cqw 2cqw; scrollbar-width: none; }
+.kumo__kicker { margin: 0; font-family: var(--font-plex-mono), monospace; font-size: 2.8cqw; letter-spacing: 0.12em; color: var(--k-green); }
+.kumo__h { margin: 1.5cqw 0 3cqw; font-family: Georgia, "Times New Roman", serif; font-size: 7cqw; line-height: 1.05; }
+.kumo__list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2cqw; }
+.kumo__item {
+  width: 100%; display: flex; align-items: center; gap: 3cqw; padding: 1.6cqw 2.4cqw 1.6cqw 1.6cqw; cursor: pointer; text-align: left;
+  background: #f7f7f4; border: 1px solid rgba(31, 36, 25, 0.14); border-radius: 3cqw; color: var(--k-ink); transition: border-color 0.15s, background 0.15s;
+}
+.kumo__item:hover { border-color: var(--k-ink); }
+.kumo__item[aria-pressed="true"] { border-color: var(--k-ink); background: #ffffff; box-shadow: inset 0 0 0 1px var(--k-ink); }
+.kumo__item img { width: 13cqw; height: 13cqw; border-radius: 2cqw; object-fit: cover; flex: none; }
+.kumo__txt { flex: 1 1 auto; display: flex; flex-direction: column; min-width: 0; }
+.kumo__name { font-family: Georgia, "Times New Roman", serif; font-size: 4.8cqw; line-height: 1.1; }
+.kumo__kind { font-family: var(--font-plex-mono), monospace; font-size: 2.6cqw; letter-spacing: 0.06em; text-transform: uppercase; opacity: 0.65; }
+.kumo__price { font-size: 3.6cqw; white-space: nowrap; }
+.kumo__add { flex: none; width: 7cqw; height: 7cqw; border-radius: 99px; display: grid; place-items: center; font-size: 4cqw; border: 1px solid var(--k-ink); }
+.kumo__item[aria-pressed="true"] .kumo__add { background: var(--k-ink); color: #ffffff; }
+.kumo__sticky { flex: none; margin: 1cqw 3cqw 4cqw; padding: 3.4cqw 4cqw; border-radius: 5cqw; background: var(--k-ink); color: #f1f1ec; }
+.kumo__hint { margin: 0 0 2cqw; font-size: 3.2cqw; line-height: 1.3; color: #d5dccb; }
+.kumo__track { height: 1.2cqw; border-radius: 99px; background: rgba(255, 255, 255, 0.18); overflow: hidden; }
+.kumo__fill { height: 100%; background: #a9c47f; border-radius: 99px; transition: width 0.4s cubic-bezier(0.2, 0.7, 0.2, 1); }
+.kumo__sum { margin-top: 2.6cqw; display: flex; justify-content: space-between; align-items: center; font-size: 3cqw; line-height: 1.3; }
+.kumo__sum strong { font-size: 4.6cqw; margin-right: 1.6cqw; }
+.kumo__sum s { opacity: 0.55; }
+.kumo__cta { background: #f1f1ec; color: var(--k-ink); border-radius: 99px; padding: 2.2cqw 4cqw; font-weight: 600; font-size: 3.6cqw; white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .bdemo__try { animation: none; } .kumo__fill { transition: none; } }

@@ -26,7 +26,7 @@ const FAQ: [string, string][] = [
   ],
   [
     "Jak wygląda płatność?",
-    "Na start 50% zaliczki przez link do płatności. Resztę po akceptacji projektu, przed uruchomieniem.",
+    "Bez zaliczki. Płacisz dopiero, gdy sklep jest gotowy i go zaakceptujesz.",
   ],
   [
     "Czy sama zmienię teksty i produkty?",
@@ -155,9 +155,6 @@ export default function Home() {
             <div className="spec__intro">
               <p className="kicker mono">SPECYFIKACJA · PAKIET PRO</p>
               <h2 className="h2 rv">Co dokładnie dostajesz.</h2>
-              <p className="lead" style={{ marginTop: 20 }}>
-                Bez żargonu. Każda pozycja to coś, co zobaczysz w swoim sklepie.
-              </p>
             </div>
             <dl className="spec__list">
               {SPEC.map(([k, v]) => (
@@ -199,7 +196,7 @@ export default function Home() {
               <h2 className="h2 rv">Wybierz, czego potrzebujesz.</h2>
             </div>
             <p className="mono" style={{ margin: 0, fontSize: 12, color: "var(--mute)", textAlign: "right" }}>
-              STAŁA CENA · ZALICZKA 50%
+              STAŁA CENA · PŁATNOŚĆ PO AKCEPTACJI
             </p>
           </div>
           <PricingTabs />

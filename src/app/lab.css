@@ -263,12 +263,12 @@ body.lab {
 }
 
 /* demo: fragment sklepu Kumo w telefonie */
-.bdemo { display: flex; flex-wrap: wrap; border: 1px solid var(--line-2); background: var(--panel); }
-.bdemo__stage { flex: 1 1 440px; background: var(--stage); padding: clamp(24px, 4vw, 48px) 20px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.bdemo { overflow: hidden; display: flex; flex-wrap: wrap; border: 1px solid var(--line-2); background: var(--panel); }
+.bdemo__stage { flex: 1 1 440px; min-width: 0; box-sizing: border-box; background: var(--stage); padding: clamp(24px, 4vw, 48px) 20px; display: flex; flex-direction: column; align-items: center; gap: 14px; }
 .bdemo__try { margin: 0; font-size: 11px; letter-spacing: 0.08em; color: var(--accent); animation: lab-nudge 1.8s ease-in-out infinite; }
 @keyframes lab-nudge { 50% { transform: translateY(4px); } }
-.bdemo__phone { width: min(340px, 82vw); }
-.bdemo__notes { flex: 1 1 360px; padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; gap: 24px; justify-content: center; }
+.bdemo__phone { width: 100%; max-width: 340px; }
+.bdemo__notes { flex: 1 1 360px; min-width: 0; box-sizing: border-box; padding: clamp(24px, 4vw, 48px); display: flex; flex-direction: column; gap: 24px; justify-content: center; }
 .bdemo__notes ol { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
 .bdemo__notes li { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--ink-2); font-size: 16px; }
 .bdemo__notes strong { color: var(--ink); font-size: 18px; }

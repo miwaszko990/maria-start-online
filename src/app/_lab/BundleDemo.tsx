@@ -112,7 +112,7 @@ export default function BundleDemo() {
 
       <div className="bdemo__notes">
         <p className="kicker mono" style={{ margin: 0 }}>
-          CO WIDZI TWOJA KLIENTKA
+          CO WIDZI KLIENT
         </p>
         <ol>
           {NOTES.map(([t, d], i) => (

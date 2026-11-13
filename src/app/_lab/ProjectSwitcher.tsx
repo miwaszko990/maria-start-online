@@ -11,7 +11,7 @@ type Project = {
   question: string;
   specs: [string, string][];
   desktop?: { src: string; alt: string };
-  phones: { src: string; alt: string }[];
+  phones: { src: string; alt: string; bg: string }[];
 };
 
 const PROJECTS: Project[] = [
@@ -32,7 +32,7 @@ const PROJECTS: Project[] = [
       ],
     ],
     desktop: { src: "/work/laroue-heroo.png", alt: "Strona główna sklepu La Roue" },
-    phones: [{ src: "/work/laroue-nowosci.jpg", alt: "Nowości w sklepie La Roue na telefonie" }],
+    phones: [{ src: "/work/laroue-nowosci.jpg", alt: "Bestsellery w sklepie La Roue na telefonie", bg: "#f3f3f3" }],
   },
   {
     code: "EXP. 02",
@@ -46,9 +46,9 @@ const PROJECTS: Project[] = [
       ["Funkcje", "Konfigurator zestawu, warianty gramatury, pasek zaufania"],
     ],
     phones: [
-      { src: "/work/kumo-hero.jpg", alt: "Strona główna Kumo Matcha na telefonie" },
-      { src: "/work/kumo-zestaw.jpg", alt: "Konfigurator zestawu Kumo Matcha" },
-      { src: "/work/kumo-karta.jpg", alt: "Karta produktu Kumo Matcha" },
+      { src: "/work/kumo-hero.jpg", alt: "Strona główna Kumo Matcha na telefonie", bg: "#efefeb" },
+      { src: "/work/kumo-zestaw.jpg", alt: "Konfigurator zestawu Kumo Matcha", bg: "#efefeb" },
+      { src: "/work/kumo-karta.jpg", alt: "Karta produktu Kumo Matcha", bg: "#efefeb" },
     ],
   },
   {
@@ -131,11 +131,15 @@ export default function ProjectSwitcher() {
                 width: phoneW,
                 flexShrink: 0,
                 animationDelay: `${0.08 * (k + 1)}s`,
-                marginBottom: p.phones.length === 3 && k === 1 ? 28 : 0,
-                ...(p.desktop ? { marginLeft: "clamp(-60px, -6vw, -24px)", position: "relative" } : {}),
+                                ...(p.desktop ? { marginLeft: "clamp(-60px, -6vw, -24px)", position: "relative" } : {}),
               }}
             >
-              <Image src={ph.src} alt={ph.alt} width={390} height={844} sizes="210px" />
+              <div className="phone__screen" style={{ background: ph.bg }}>
+                <div className="phone__status mono" aria-hidden="true">
+                  <span>9:41</span>
+                </div>
+                <Image src={ph.src} alt={ph.alt} width={660} height={1344} sizes="210px" />
+              </div>
             </div>
           ))}
         </div>

@@ -6,9 +6,10 @@ import { useState } from "react";
 const ITEMS = [
   { id: "cer", name: "Ceremonial", kind: "Matcha · 30 g", price: 89, img: "/demo/ceremonial.jpg" },
   { id: "daily", name: "Daily", kind: "Matcha · 50 g", price: 69, img: "/demo/daily.jpg" },
-  { id: "hoji", name: "Hojicha", kind: "Prażona · 50 g", price: 59, img: "/demo/hojicha.jpg" },
   { id: "chawan", name: "Chawan", kind: "Miska", price: 149, img: "/demo/chawan.jpg" },
   { id: "chasen", name: "Chasen", kind: "Trzepaczka", price: 79, img: "/demo/chasen.jpg" },
+  { id: "chashaku", name: "Chashaku", kind: "Łyżeczka", price: 29, img: "/demo/chashaku.jpg" },
+  { id: "kuse", name: "Kusenaoshi", kind: "Stojak", price: 39, img: "/demo/kusenaoshi.jpg" },
 ];
 
 const zl = (n: number) =>

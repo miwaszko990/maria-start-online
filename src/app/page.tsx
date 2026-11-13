@@ -21,7 +21,7 @@ const FAQ: [string, string][] = [
     "Tak, 3 dni od otrzymania kompletu materiałów. Jedyne, na co nie mamy wpływu, to weryfikacja konta u operatora płatności. Zgłaszamy ją od razu, żeby zdążyła na start.",
   ],
   [
-    "Co muszę przygotować?",
+    "Co trzeba przygotować?",
     "Logo, zdjęcia produktów i kilka zdań o marce. Jeśli czegoś brakuje, pomożemy to przygotować.",
   ],
   [
@@ -29,8 +29,8 @@ const FAQ: [string, string][] = [
     "Bez zaliczki. Płacisz dopiero, gdy sklep jest gotowy i go zaakceptujesz.",
   ],
   [
-    "Czy sama zmienię teksty i produkty?",
-    "Tak. Pokażemy Ci, jak to robić. Większe zmiany możesz zlecić nam osobno.",
+    "Czy można samemu zmieniać teksty i produkty?",
+    "Tak. Pokazujemy, jak to robić. Większe zmiany można zlecić nam osobno.",
   ],
   [
     "Kto zajmie się domeną?",
@@ -137,12 +137,12 @@ export default function Home() {
         <section className="section wrap" id="demo">
           <div className="section__head">
             <div>
-              <p className="kicker mono">DEMO NA ŻYWO · ZE SKLEPU KUMO MATCHA</p>
-              <h2 className="h2 rv">Klientka sama składa większy koszyk.</h2>
+              <p className="kicker mono">PRZYKŁAD FUNKCJI NA ZAMÓWIENIE · SKLEP KUMO MATCHA</p>
+              <h2 className="h2 rv">Dodaj więcej niż jeden produkt do koszyka.</h2>
             </div>
             <p className="lead rv">
-              Konfigurator zestawu z rabatem za więcej produktów. Klient sam składa większy koszyk, a rabat liczy
-              się automatycznie. Takie rozwiązanie możemy dodać do Twojego sklepu.
+              Tak może wyglądać fragment Twojego sklepu. Im więcej produktów w zestawie, tym większy rabat,
+              liczony od razu w koszyku. Możemy dodać to do sklepu, który już masz.
             </p>
           </div>
           <BundleDemo />

@@ -37,9 +37,9 @@ const PROJECTS: Project[] = [
   {
     code: "kumo",
     name: "Kumo Matcha",
-    status: "Projekt koncepcyjny",
-    url: "sklep koncepcyjny",
-    question: "Sklep, który zrobiliśmy dla wymyślonej marki herbaty, żeby pokazać konfigurator zestawu z rabatem. Możesz go przetestować niżej.",
+    status: "Sklep demo, działa na żywo",
+    url: "v0fi10-uy.myshopify.com",
+    question: "Pełny sklep dla wymyślonej marki matchy, zrobiony, żeby pokazać, co potrafimy na Shopify. Możesz w nim klikać jak klient: złożyć zestaw z rabatem i dodać produkty do koszyka.",
     specs: [
       ["Branża", "Herbata i akcesoria"],
       ["Platforma", "Shopify"],
@@ -126,9 +126,9 @@ export default function ProjectSwitcher() {
               </div>
             ))}
           </dl>
-          {p.code === "laroue" && (
+          {p.url && (
             <a href={`https://${p.url}`} target="_blank" rel="noopener" className="link-arrow">
-              Otwórz larouebrand.com ↗
+              {p.code === "laroue" ? "Otwórz larouebrand.com ↗" : "Otwórz sklep demo ↗"}
             </a>
           )}
         </div>

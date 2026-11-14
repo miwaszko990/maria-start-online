@@ -244,25 +244,25 @@ const TABS = [
   {
     id: "zestaw",
     label: "Zestaw z rabatem",
-    hint: "↓ KLIKNIJ PRODUKTY W TELEFONIE",
+    hint: "Kliknij produkty w telefonie",
     notes: [
       ["Dodaje jednym kliknięciem", "Produkty są obok siebie, nie trzeba przechodzić między stronami."],
       ["Widzi, ile brakuje do rabatu", "Podpowiedź i pasek zachęcają, żeby dorzucić jeszcze jedną rzecz."],
       ["Rabat liczy się sam", "Cena w koszyku zmienia się od razu. Ty nic nie przeliczasz."],
     ],
-    tiers: "2 PRODUKTY −10% · 3 PRODUKTY −15% · 5 PRODUKTÓW −20%",
+    tiers: "2 produkty −10%, 3 produkty −15%, 5 produktów −20%",
     subject: "Zestaw z rabatem w moim sklepie",
   },
   {
     id: "koszyk",
     label: "Koszyk z „pasuje do”",
-    hint: "↓ DODAJ PRODUKT Z „PASUJE DO”",
+    hint: "Dodaj coś z „pasuje do”",
     notes: [
       ["Widzi, ile brakuje do darmowej dostawy", "Pasek rośnie z każdym produktem, więc łatwiej dorzucić jeszcze jedną rzecz."],
       ["Dostaje propozycje „pasuje do”", "Produkty dobrane do tego, co już jest w koszyku, dodawane jednym kliknięciem."],
       ["Odblokowuje prezent", "Od ustalonej kwoty gratis sam trafia do koszyka."],
     ],
-    tiers: "DARMOWA DOSTAWA OD 499 ZŁ · PREZENT OD 799 ZŁ",
+    tiers: "Darmowa dostawa od 499 zł, prezent od 799 zł",
     subject: "Koszyk z pasuje do w moim sklepie",
   },
 ];
@@ -283,30 +283,29 @@ export default function BundleDemo() {
             className="tab"
             onClick={() => setTab(i)}
           >
-            <span className="tab__code mono">FUNKCJA 0{i + 1}</span>
             <span className="tab__name">{x.label}</span>
           </button>
         ))}
       </div>
       <div className="bdemo" id="demo-panel" role="tabpanel">
         <div className="bdemo__stage">
-          <p className="bdemo__try mono" aria-hidden="true">
+          <p className="bdemo__try" aria-hidden="true">
             {t.hint}
           </p>
           <div className="phone bdemo__phone" key={t.id}>
             {t.id === "zestaw" ? <KumoScreen /> : <CartScreen />}
           </div>
-          <p className="bdemo__note mono">{t.id === "zestaw" ? "SKLEP KUMO MATCHA · KONCEPT" : "SKLEP PRZYKŁADOWY · ZDJĘCIA PRZYKŁADOWE"}</p>
+          <p className="bdemo__note">{t.id === "zestaw" ? "Sklep koncepcyjny Kumo Matcha" : "Sklep przykładowy, zdjęcia poglądowe"}</p>
         </div>
 
         <div className="bdemo__notes">
-          <p className="kicker mono" style={{ margin: 0 }}>
-            CO WIDZI KLIENT
+          <p className="kicker" style={{ margin: 0 }}>
+            Co widzi Twój klient
           </p>
           <ol>
             {t.notes.map(([title, d], i) => (
               <li key={title}>
-                <span className="mono bdemo__n">0{i + 1}</span>
+                <span className="bdemo__n">{i + 1}</span>
                 <span>
                   <strong>{title}</strong>
                   <br />
@@ -315,9 +314,9 @@ export default function BundleDemo() {
               </li>
             ))}
           </ol>
-          <p className="bdemo__tiers mono">{t.tiers}</p>
+          <p className="bdemo__tiers">{t.tiers}</p>
           <a className="btn btn--dark" href={`mailto:hello@online-lab.pl?subject=${encodeURIComponent(t.subject)}`}>
-            Chcę to w moim sklepie →
+            Chcę to w moim sklepie
           </a>
         </div>
       </div>

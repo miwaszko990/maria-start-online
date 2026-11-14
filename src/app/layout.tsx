@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
+import { Schibsted_Grotesk, IBM_Plex_Mono } from "next/font/google";
 import { Toaster } from "sonner";
 import "./globals.css";
 import "./lab.css";
 
-const plexSans = IBM_Plex_Sans({
+const grotesk = Schibsted_Grotesk({
   variable: "--font-plex-sans",
   subsets: ["latin", "latin-ext"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -20,7 +20,7 @@ const plexMono = IBM_Plex_Mono({
 
 const title = "Projektowanie sklepów internetowych na Shopify · gotowe w 3 dni | Online Lab";
 const description =
-  "Projektujemy, budujemy i uruchamiamy sklepy internetowe dla nowych marek i tych, które chcą odświeżyć lub rozbudować swój sklep. BLIK, newsletter i statystyki w pakiecie. Sklep gotowy w 3 dni, stała cena.";
+  "Sklepy na Shopify dla marek odzieżowych, beauty i lifestyle. Gotowe w 3 dni, stała cena 1499 zł, płatność dopiero po akceptacji. BLIK, newsletter i statystyki w pakiecie.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://online-lab.pl"),
@@ -47,7 +47,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={`${plexSans.variable} ${plexMono.variable} lab antialiased`}>
+      <body className={`${grotesk.variable} ${plexMono.variable} lab antialiased`}>
         {children}
         <Toaster position="top-right" />
       </body>

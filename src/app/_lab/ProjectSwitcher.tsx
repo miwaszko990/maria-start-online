@@ -16,12 +16,12 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
-    code: "EXP. 01",
+    code: "laroue",
     name: "La Roue",
-    status: "● LIVE",
+    status: "Działający sklep",
     url: "larouebrand.com",
     question:
-      "Kompletny sklep marki odzieżowej, w którym zakupy na telefonie są proste od wyboru rozmiaru po płatność.",
+      "Sklep marki odzieżowej dla wysokich kobiet. Zrobiliśmy wszystko: projekt, produkty, płatności i start sprzedaży. Zakupy na telefonie są proste od wyboru rozmiaru po płatność.",
     specs: [
       ["Branża", "Odzież dla wysokich kobiet"],
       ["Platforma", "Shopify"],
@@ -35,11 +35,11 @@ const PROJECTS: Project[] = [
     phones: [{ src: "/work/laroue-nowosci.jpg", alt: "Bestsellery w sklepie La Roue na telefonie", bg: "#f3f3f3" }],
   },
   {
-    code: "EXP. 02",
+    code: "kumo",
     name: "Kumo Matcha",
-    status: "KONCEPT",
+    status: "Projekt koncepcyjny",
     url: "sklep koncepcyjny",
-    question: "Czy konfigurator zestawu z rabatem zachęci do większego koszyka?",
+    question: "Sklep, który zrobiliśmy dla wymyślonej marki herbaty, żeby pokazać konfigurator zestawu z rabatem. Możesz go przetestować niżej.",
     specs: [
       ["Branża", "Herbata i akcesoria"],
       ["Platforma", "Shopify"],
@@ -50,38 +50,6 @@ const PROJECTS: Project[] = [
       { src: "/work/kumo-zestaw.jpg", alt: "Konfigurator zestawu Kumo Matcha", bg: "#efefeb" },
       { src: "/work/kumo-karta.jpg", alt: "Karta produktu Kumo Matcha", bg: "#efefeb" },
     ],
-  },
-  {
-    code: "EXP. 03",
-    name: "Lumo",
-    status: "PROJEKT STRONY",
-    url: "zrzut ekranu",
-    question: "Czy w kilka sekund da się wytłumaczyć, czym jest nowa aplikacja?",
-    specs: [
-      ["Branża", "Aplikacja dla twórców"],
-      ["Platforma", "Next.js"],
-      ["Zakres", "Strona prowadząca do zapisu"],
-      ["Pakiet", "Odpowiednik pakietu Start"],
-      ["Status", "Strona nie jest już online, pokazujemy projekt na zrzucie"],
-    ],
-    desktop: { src: "/work/lumo-hero.png", alt: "Projekt strony aplikacji Lumo" },
-    phones: [],
-  },
-  {
-    code: "EXP. 04",
-    name: "WorldTok",
-    status: "PROJEKT STRONY",
-    url: "zrzut ekranu",
-    question: "Jak zbudować zaufanie klientów z wielu krajów jedną stroną?",
-    specs: [
-      ["Branża", "Marketing międzynarodowy"],
-      ["Platforma", "Webflow"],
-      ["Zakres", "Sekcje zaufania i proces krok po kroku"],
-      ["Pakiet", "Odpowiednik pakietu Start"],
-      ["Status", "Strona nie jest już online, pokazujemy projekt na zrzucie"],
-    ],
-    desktop: { src: "/work/worldtok-hero.png", alt: "Projekt strony WorldTok" },
-    phones: [],
   },
 ];
 
@@ -102,9 +70,7 @@ export default function ProjectSwitcher() {
             className="tab"
             onClick={() => setI(idx)}
           >
-            <span className="tab__code mono">
-              {x.code} · {x.status}
-            </span>
+            <span className="tab__code">{x.status}</span>
             <span className="tab__name">{x.name}</span>
           </button>
         ))}
@@ -145,8 +111,8 @@ export default function ProjectSwitcher() {
         </div>
 
         <div className="switcher__info">
-          <p className="kicker mono" style={{ margin: 0 }}>
-            {p.code} · {p.status}
+          <p className="kicker" style={{ margin: 0 }}>
+            {p.status}
           </p>
           <h3 className="switcher__name">{p.name}</h3>
           <p className="lead" style={{ fontSize: 17 }}>
@@ -155,14 +121,14 @@ export default function ProjectSwitcher() {
           <dl className="specs">
             {p.specs.map(([k, v]) => (
               <div key={k}>
-                <dt className="mono">{k}</dt>
+                <dt>{k}</dt>
                 <dd>{v}</dd>
               </div>
             ))}
           </dl>
-          {p.status.includes("LIVE") && (
-            <a href={`https://${p.url}`} target="_blank" rel="noopener" className="mono" style={{ fontSize: 13 }}>
-              Zobacz sklep na żywo ↗
+          {p.code === "laroue" && (
+            <a href={`https://${p.url}`} target="_blank" rel="noopener" className="link-arrow">
+              Otwórz larouebrand.com ↗
             </a>
           )}
         </div>

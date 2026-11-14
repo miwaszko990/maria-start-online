@@ -20,7 +20,7 @@ const plexMono = IBM_Plex_Mono({
 
 const title = "Projektowanie sklepów internetowych na Shopify · gotowe w 3 dni | Online Lab";
 const description =
-  "Projektujemy, budujemy i uruchamiamy sklepy internetowe dla nowych marek i tych, które wyrosły z Instagrama. BLIK, newsletter i statystyki w pakiecie. Sklep gotowy w 3 dni, stała cena.";
+  "Projektujemy, budujemy i uruchamiamy sklepy internetowe dla nowych marek i tych, które chcą odświeżyć lub rozbudować swój sklep. BLIK, newsletter i statystyki w pakiecie. Sklep gotowy w 3 dni, stała cena.";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://online-lab.pl"),

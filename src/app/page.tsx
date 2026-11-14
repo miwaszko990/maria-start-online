@@ -116,8 +116,7 @@ export default function Home() {
             </h1>
             <div className="hero__side in d2">
               <p className="lead">
-                Projektujemy, budujemy i uruchamiamy sklepy internetowe dla nowych marek i tych, które wyrosły
-                z Instagrama. BLIK, newsletter i statystyki w pakiecie.
+                Projektujemy, budujemy i uruchamiamy sklepy internetowe dla nowych marek i tych, które chcą odświeżyć lub rozbudować swój sklep. BLIK, newsletter i statystyki w pakiecie.
               </p>
               <div className="hero__btns">
                 <a href="#kontakt" className="btn btn--dark">
@@ -137,12 +136,12 @@ export default function Home() {
         <section className="section wrap" id="demo">
           <div className="section__head">
             <div>
-              <p className="kicker mono">PRZYKŁAD FUNKCJI NA ZAMÓWIENIE · SKLEP KUMO MATCHA</p>
-              <h2 className="h2 rv">Dodaj więcej niż jeden produkt do koszyka.</h2>
+              <p className="kicker mono">PRZYKŁADY FUNKCJI NA ZAMÓWIENIE</p>
+              <h2 className="h2 rv">Funkcje, które zwiększają koszyk.</h2>
             </div>
             <p className="lead rv">
-              Tak może wyglądać fragment Twojego sklepu. Im więcej produktów w zestawie, tym większy rabat,
-              liczony od razu w koszyku. Możemy dodać to do sklepu, który już masz.
+              Kliknij i sprawdź, jak działają w telefonie. Każdą z nich możemy dodać do nowego sklepu albo do
+              tego, który już masz.
             </p>
           </div>
           <BundleDemo />
